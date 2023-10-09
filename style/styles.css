@@ -1,0 +1,50 @@
+html {
+	background-color: black;
+	color: rgb(106, 150, 189);
+	font-family: 'Young Serif', serif;
+	display: flex;
+}
+
+.logo {
+
+	align-self: start;
+	font-size: 50px;
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+}
+
+
+
+.Bienvenido, h3 {
+	color:  rgb(106, 150, 189);
+	text-align: center;
+	font-size: 30px;
+	
+}
+
+.Bienvenido, h5 {
+	color: white;
+	font-style: light;
+	text-align: center;
+	font-size: 15px;
+
+}
+
+.fondoNube {
+	
+	background-image: url('https://cloudatlas.wmo.int/images/compressed/5133_main_crepuscular-rays-through-gaps-in-cloud_clouds-photometeors.JPG');
+ 	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	opacity: 0.6;
+	background-size: 100% 100%;
+}
+
+.fondoNube, h2 {
+	text-align: center;
+	color: white;
+}
+
+.textoSatel, h5 {
+	text-align: left;
+}
