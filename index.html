@@ -2,73 +2,181 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 	<link rel="stylesheet" href="./style/styles.css"/>
-	<style> a { color: #919ea8;}</style>
-	<title>Meteorologia</title>
-	
+	<title>Meteorologia</title>	
 </head>
+
 <body>
 	<header>
 		<div class="logo">
 			<img height="45px" src="./img/166b5722c7239ed276be148ba38c2000-removebg-preview.png" alt="logo">	
-			<span>Meteorologia</span>
+			
+			<a name="Inicio"><span>Meteorologia</span></a>
 		</div>
 	</header>
 
-	<nav class="navbar"> 
-			  
-		<ul>
-			<a href="#Inicio">Inicio </a>
-			<br>
-			<a href="#Clima">Clima</a>
-			<br>
-			<a href="#ImagenSatelital">Imágenes Satelitales</a>
-			<br>
-			<a href="#Informacion">Información</a>
-			<br>
-			<a href="#QuienesSomos">Quienes somos</a>
-		</ul>
+	<!-- menu con boostrap	   -->
+	
+	<nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+		<nav class="navbar navbar-expand-lg bg-body-tertiary">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#Inicio"> Inicio</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<!-- <li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="#Clima">Clima</a>
+						</li> -->
+						<li class="nav-item">
+							<a class="nav-link" href="#Informacion">Informacion</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#Imagenes" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								Imagenes 
+							</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="#ImagenSatelital">Imagen Satelital</a></li>
+								<li><a class="dropdown-item" href="#Radar">Radar</a></li>				  
+							</ul>
+						</li>
+					</ul>
+					<form class="d-flex" role="search">
+						<input class="form-control me" type="search" placeholder="Buscar" aria-label="Search">
+						<button class="btn btn-outline-success" type="submit">Buscar</button>
+					</form>
+				</div>
+			</div>
+		</nav>
 	</nav>
+	
 
 	<main>
-		<hr>
-		<section class="Principio">
-			<a name="Inicio" class="Bienvenido"><h3>Explorando las nubes</h3></a>
+		
+		<section class="top">
+			<a class="Bienvenido"><h3>Explorando nuestro cielo</h3></a>
 			<div>
 				
-				<h5>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur dicta sint quas culpa minus.</h5>
+				<p>Aqui encontrarás un poco de información para apreciar nuestro clima.</p>
 					<div class="container">
-						<img height="220px" src="https://cloudatlas.wmo.int/images/compressed/4997_main_thunderstorm_clouds-electrometeors.jpg" alt="Tormenta" class="Tormenta">
-						<img height="220px" src="https://cloudatlas.wmo.int/images/compressed/5025_main_advection-fog-sea-fog_hydrometeors.jpeg" alt="NieblaMarina" class="NieblaMarina">
-						<img height="220px" src="https://cloudatlas.wmo.int/images/compressed/5680_main_aurora-australis_electrometeors.jpg" alt="Aurora">
-						<img height="220px" src="https://cloudatlas.wmo.int/images/compressed/4712_main_hard-rime_hydrometeors.JPG" alt="Hielo">
+						<div class="box" >
+							<img  class="box-imag"  src="https://cloudatlas.wmo.int/images/compressed/4997_main_thunderstorm_clouds-electrometeors.jpg">
+							<span class="box-texto">Tormenta</span>	
+						</div>
+						<div class="box">
+							<img src="https://cloudatlas.wmo.int/images/compressed/5025_main_advection-fog-sea-fog_hydrometeors.jpeg">
+							<span>Niebla marina</span>
+						</div>
+						<div class="box">
+							<img  src="https://cloudatlas.wmo.int/images/compressed/5680_main_aurora-australis_electrometeors.jpg">
+							<span>Aurora</span>
+						</div>
+						<div class="box">
+							<img  src="https://cloudatlas.wmo.int/images/compressed/4712_main_hard-rime_hydrometeors.JPG">
+							<span>Helada </span>
+						</div>
 					</div>
 			</div>
 
-			<div class="fondoNube"> 
-				<h2 class="textoImag">Imagen </h2>
-				<h5>Descubriendo el clima</h5>
-			</div>
 		</section>
 		
 	</main>
-	
-	<section>
-		<a name="ImagenSatelital" class="ImagSatel"><h3>Imágenes Satelitales</h3></a>
-		<br>
-		<a href="https://www.smn.gob.ar/satelite" class="Satelite">
-			<img height="300px" src="https://www.bcr.com.ar/sites/default/files/styles/free/public/imsat_ACA_2611.jpg?itok=ga5dIoTi" alt="ImagSatel1">
-			
+
+	<section class="Imag">
+		<a name="Imagenes"><h2>Imágenes</h2>
+			<div class="container">
+				<div class="box">
+					<div class="box-row">
+						<div class="box-cell box1">
+							<h4>Imagenes Satelitales </h4>
+							<a name="ImagenSatelital" href="https://www.smn.gob.ar/satelite" class="Satelite">
+								<img height="300px" src="./img/Satelite.jpg" alt="ImagSatel1">
+							</a>
+						</div>
+						<div class="box-cell box2">
+							<h4> Radar </h4>
+							<a name="Radar" href="https://www.smn.gob.ar/radar" class="Radar1">
+								<img height="300px" src="./img/radar.png" alt="ImagRadar1">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</a>
-		<div class="textoSatel">
-			<h5> Imagenes Satelitales </h5>
+	</section>		
+		<!-- tarjetas con bootstrap -->
+	<section class="cartasTexto">
+		<div><a name="Informacion" class="Info"><h2>Información</h2></a>
+		<br>
+			<div class="card mb-3" style="max-width: 540px;">
+				<div class="row g-0">
+					<div class="col-md-4">
+						<img src="https://cloudatlas.wmo.int/images/compressed/4997_main_thunderstorm_clouds-electrometeors.jpg" class="img-fluid rounded-start" alt="NubesTormenta">
+					</div>
+					<div class="col-md-8">
+						<div class="card-body">
+						<h4 class="card-title">Tormenta</h4>
+						<p class="card-text">Una o más descargas repentinas de electricidad que se manifiestan con un destello de luz (relámpago) y con un ruido seco o un estruendo sordo (trueno).
+							Rayos: descargas eléctricas en forma de arco, producidas por la diferencia de potencial eléctrico entre las nubes y la tierra.
+							Relámpago: Manifestación luminosa que acompaña a una descarga eléctrica repentina que se produce desde el interior de una nube o, con menor frecuencia, desde estructuras altas sobre el suelo o montañas.
+							Trueno: Es el ruido seco o estruendo producido por la expansión abrupta del aire en el momento de la descarga eléctrica. Sin embargo, por ser la velocidad de la luz mayor que la del sonido, hay un intervalo entre esta descarga y el trueno para los sentidos del observador.
+						</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="card mb-3" style="max-width: 540px;">
+				<div class="row g-0">
+					<div class="col-md-4">
+						<img src="https://cloudatlas.wmo.int/images/compressed/5025_main_advection-fog-sea-fog_hydrometeors.jpeg" class="img-fluid rounded-start" alt="Neblina">
+					</div>
+					<div class="col-md-8">
+						<div class="card-body">
+							<h4 class="card-title">Niebla Marina</h4>
+							<p class="card-text">Es uno de los hidrometeoros que consiste en la suspension de articulas en el aire, en este caso de gotitas muy pequeñas de agua, que reducen la visibilidad en la superficie terrestre. La reduccion de la visibilidad depende fuertemente de la densidad de las gotitas suspendidas y de sus distintos tamaños. El termino neblina se usa cuando el hidrometeoro permite una visibilidad en la superficie terrestre mayor a un kilometro. La neblina forma generalmente un velo bastante delgado, grisaceo, que cubre el paisaje.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="card mb-3" style="max-width: 540px;">
+				<div class="row g-0">
+					<div class="col-md-4">
+						<img src="https://cloudatlas.wmo.int/images/compressed/5680_main_aurora-australis_electrometeors.jpg" class="img-fluid rounded-start" alt="AuroraBoreal">
+					</div>
+					<div class="col-md-8">
+						<div class="card-body">
+							<h4 class="card-title">Aurora</h4>
+							<p class="card-text">Se trata de un fenomeno luminoso, de color verde con tonalidades rojizas, que aparece en la alta atmosfera en forma de cortinas, bandas o doseles en las regiones polares, originado por la iteraccion entre el viento solar y el campo magnético terrestre.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="card mb-3" style="max-width: 540px;">
+				<div class="row g-0">
+					<div class="col-md-4">
+						<img src="https://cloudatlas.wmo.int/images/compressed/4712_main_hard-rime_hydrometeors.JPG" class="img-fluid rounded-start" alt="Helada">
+					</div>
+					<div class="col-md-8">
+						<div class="card-body">
+							<h4 class="card-title">Aurora</h4>
+							<p class="card-text">Una helada es un hecho meteorológico que se da cuando se combinan algunos escenarios como el descenso de la temperatura por debajo de los 0º C, la humedad en el aire, los vientos y las condiciones de terreno. Se puede manifestar en forma de hielo o escarcha que sucede durante la madrugada o las primeras horas de la mañana.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-		<a name="Informacion" class="Info"><h3>Información</h3></a>
-		
 	</section>
-	<footer>
-		<a name="QuienesSomos" class="QuienSom"><h6>Quienes somos</h6></a>
-	</footer>
+	
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
